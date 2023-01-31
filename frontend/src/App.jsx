@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="App flex flex-col">
       <Header />
-      <Outlet />
+      <div class="container mx-auto flex flex-wrap py-6">
+        <Outlet />
+      </div>
     </div>
   );
 }
