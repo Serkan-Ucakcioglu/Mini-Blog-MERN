@@ -6,6 +6,7 @@ const port = process.env.PORT || 4000;
 const dbConnect = require("./config/dbConnect");
 const blogRoute = require("./router/blogRoute");
 
+app.use(express.json());
 dbConnect();
 app.use(
   cors({
@@ -14,7 +15,6 @@ app.use(
   })
 );
 app.use("/", blogRoute);
-app.use(express.json());
 
 app.listen(port, () =>
   console.log("> Server is up and running on port : " + port)
