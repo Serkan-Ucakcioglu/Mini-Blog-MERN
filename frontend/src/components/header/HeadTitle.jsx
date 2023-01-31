@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HeadTitle() {
   return (
@@ -7,9 +8,9 @@ function HeadTitle() {
         <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">
           Technology
         </a>
-        <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">
+        <Link to="/car" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">
           Car
-        </a>
+        </Link>
         <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">
           Finance
         </a>

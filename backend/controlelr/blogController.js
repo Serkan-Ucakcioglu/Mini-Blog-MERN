@@ -3,7 +3,6 @@ const Blog = require("../model/blogSchema");
 const getAllBlog = async (req, res) => {
   try {
     const blogList = await Blog.find({ category: req.params.category });
-
     res.status(200).json(blogList);
   } catch (error) {
     res.status(404).json(error?.message);
@@ -13,7 +12,10 @@ const getAllBlog = async (req, res) => {
 const addBlog = async (req, res) => {
   try {
     const { title, url, description, category } = await req.body;
-    console.log(req.body);
+    console.log(category);
+    if (!["Car", "Finance", "Technology"].includes(category)) {
+      return res.status(404).json("category not found");
+    }
     const checkList = await Blog.findOne({ title });
     if (checkList) {
       return res.status(404).json("already on this blog");
