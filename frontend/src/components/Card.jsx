@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ blog }) {
   return (
-    <article className="flex flex-col shadow my-4">
+    <article className="flex flex-col shadow my-4 w-[500px]">
       <a href="#" className="hover:opacity-75">
         <img
           src={blog?.url}
