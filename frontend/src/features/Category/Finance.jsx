@@ -1,16 +1,8 @@
-import React from "react";
-import Card from "../../components/Card";
-import { useGetCategoryQuery } from "../categoryApiSlice";
+import useContent from "../../hooks/useContent";
 
 function Finance() {
-  const { data } = useGetCategoryQuery("Finance");
-  return (
-    <>
-      {data?.map((blog) => {
-        return <Card blog={blog} key={blog?._id} />;
-      })}
-    </>
-  );
+  const content = useContent("Finance");
+  return <>{content}</>;
 }
 
 export default Finance;

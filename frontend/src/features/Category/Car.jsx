@@ -1,16 +1,9 @@
 import React from "react";
-import Card from "../../components/Card";
-import { useGetCategoryQuery } from "../categoryApiSlice";
+import useContent from "../../hooks/useContent";
 
 function Car() {
-  const { data } = useGetCategoryQuery("Car");
-  return (
-    <>
-      {data?.map((blog) => {
-        return <Card blog={blog} key={blog?._id} />;
-      })}
-    </>
-  );
+  const content = useContent("Car");
+  return <>{content}</>;
 }
 
 export default Car;

@@ -1,15 +1,8 @@
-import { useGetCategoryQuery } from "../categoryApiSlice";
-import Card from "../../components/Card";
+import useContent from "../../hooks/useContent";
 
 function Tech() {
-  const { data } = useGetCategoryQuery("Technology");
-  return (
-    <>
-      {data?.map((blog) => {
-        return <Card blog={blog} key={blog?._id} />;
-      })}
-    </>
-  );
+  const content = useContent("Technology");
+  return <>{content}</>;
 }
 
 export default Tech;
