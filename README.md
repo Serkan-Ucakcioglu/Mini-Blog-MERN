@@ -1,4 +1,4 @@
-# Mini-Blogs
+# Mini-Blogs Apps
 
 <img width="1353" alt="image" src="https://user-images.githubusercontent.com/98692987/216758087-3b16dc45-9304-40ff-9fa2-e7e4653446f2.png">
 <img width="1174" alt="image" src="https://user-images.githubusercontent.com/98692987/216758095-13e9502a-362d-4dd7-af40-6d42db311baa.png">
