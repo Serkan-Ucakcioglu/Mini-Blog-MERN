@@ -1,11 +1,16 @@
 import React from "react";
-import { DataFace } from "../hooks/useContent";
-
-interface Blog {
+interface DataFace {
+  category: String;
+  description: String;
+  title: String;
+  url: String;
+  _id: String;
+}
+interface IBlog {
   blog: DataFace;
 }
 
-function Card({ blog }: Blog) {
+function Card({ blog }: IBlog) {
   return (
     <article className="flex flex-col shadow my-4 w-[500px]">
       <a href="#" className="hover:opacity-75">
