@@ -1,7 +1,7 @@
 import useContent from "../../hooks/useContent";
 
 function Finance() {
-  const content = useContent("Finance");
+  const content: any = useContent("Finance");
   return <>{content}</>;
 }
 

@@ -1,7 +1,7 @@
 import useContent from "../../hooks/useContent";
 
 function Tech() {
-  const content = useContent("Technology");
+  const content: any = useContent("Technology");
   return <>{content}</>;
 }
 
