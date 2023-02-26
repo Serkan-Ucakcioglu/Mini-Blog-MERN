@@ -12,9 +12,7 @@ export interface DataFace {
 function useContent(endpoint: String) {
   const { data } = useGetCategoryQuery<DataFace[]>(endpoint);
 
-  console.log(data, "data");
-
-  const content = data?.map((blog) => {
+  const content = data?.map((blog: any) => {
     return <Card blog={blog} key={blog?._id} />;
   });
 
