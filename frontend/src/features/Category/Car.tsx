@@ -2,7 +2,7 @@ import React from "react";
 import useContent from "../../hooks/useContent";
 
 function Car() {
-  const content: JSX.Element = useContent("Car");
+  const content = useContent("Car");
   return <>{content}</>;
 }
 

@@ -3,7 +3,7 @@ import { useGetCategoryQuery } from "../features/categoryApiSlice";
 
 function useContent(endpoint: string) {
   const { data } = useGetCategoryQuery(endpoint);
-  const content = data?.map((blog) => {
+  const content: JSX.Element = data?.map((blog) => {
     return <Card blog={blog} key={blog?._id} />;
   });
 
