@@ -7,7 +7,7 @@ import "./index.css";
 import store from "./store/index";
 import { router } from "./router/router";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
     <RouterProvider router={router}>
       <App />
