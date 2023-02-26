@@ -6,7 +6,7 @@ interface Endpoints {
 
 export const blogApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getCategory: builder.query<Endpoints, any>({
+    getCategory: builder.query<Endpoints, null>({
       query: (endpoint) => ({
         url: `/${endpoint}`,
       }),
