@@ -1,11 +1,16 @@
 import React from "react";
+import { DataFace } from "../hooks/useContent";
 
-function Card({ blog }) {
+interface Blog {
+  blog: DataFace;
+}
+
+function Card({ blog }: Blog) {
   return (
     <article className="flex flex-col shadow my-4 w-[500px]">
       <a href="#" className="hover:opacity-75">
         <img
-          src={blog?.url}
+          src={blog?.url?.toString()}
           loading="lazy"
           className="h-[400px] w-full object-cover"
         />

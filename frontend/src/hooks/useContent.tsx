@@ -1,8 +1,18 @@
 import Card from "../components/Card";
 import { useGetCategoryQuery } from "../features/categoryApiSlice";
 
-function useContent(endpoint) {
-  const { data } = useGetCategoryQuery(endpoint);
+export interface DataFace {
+  category: String;
+  description: String;
+  title: String;
+  url: String;
+  _id: String;
+}
+
+function useContent(endpoint: String) {
+  const { data } = useGetCategoryQuery<DataFace[]>(endpoint);
+
+  console.log(data, "data");
 
   const content = data?.map((blog) => {
     return <Card blog={blog} key={blog?._id} />;
