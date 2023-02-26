@@ -1,13 +1,9 @@
 import { apiSlice } from "../api/apiSlice";
 
-interface Endpoints {
-  endpoint: string;
-}
-
 export const blogApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getCategory: builder.query<Endpoints, string>({
-      query: (endpoint) => ({
+    getCategory: builder.query({
+      query: (endpoint: String) => ({
         url: `/${endpoint}`,
       }),
     }),

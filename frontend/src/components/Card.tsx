@@ -2,9 +2,7 @@ import React from "react";
 interface DataFace {
   category: String;
   description: String;
-  title: String;
   url: String;
-  _id: String;
 }
 interface IBlog {
   blog: DataFace;
