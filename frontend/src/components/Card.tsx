@@ -1,10 +1,11 @@
 import React from "react";
-interface DataFace {
+export interface DataFace {
+  _id: string;
   category: String;
   description: String;
   url: String;
 }
-interface IBlog {
+export interface IBlog {
   blog: DataFace;
 }
 
